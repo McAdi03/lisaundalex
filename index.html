@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="noindex, nofollow, noarchive">
+		<title>Lisa &amp; Alex – Wir heiraten</title>
+		<style>
+			@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf') format('truetype')}
+			@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/Cormorant_Garamond/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype')}
+			@font-face{font-family:'Jost';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/Jost/Jost-VariableFont_wght.ttf') format('truetype')}
+			@font-face{font-family:'Jost';font-style:italic;font-weight:100 900;font-display:swap;src:url('fonts/Jost/Jost-Italic-VariableFont_wght.ttf') format('truetype')}
+			:root{--bordeaux:#6B1E2E;--bordeaux-d:#4E1421;--creme:#FAF3E7;--creme-d:#F0E4D0;--text:#3E2A2E;--sand:#C9A98C}
+			*{box-sizing:border-box}
+			html{scroll-behavior:smooth}
+			html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+			body{overflow-x:clip;margin:0;background:var(--creme);color:var(--text);font-family:'Jost','Helvetica Neue',Arial,sans-serif;font-weight:300;line-height:1.7}
+			h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;color:var(--bordeaux);margin:0}
+			nav{position:sticky;top:0;z-index:10;background:rgba(250,243,231,.94);backdrop-filter:blur(6px);display:flex;justify-content:center;gap:1.6rem;padding:.9rem 1rem;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid var(--creme-d)}
+			nav a{color:var(--bordeaux);text-decoration:none}
+			nav a:hover{text-decoration:underline}
+			.hero{text-align:center;padding:4rem 1.2rem 5rem}
+			.arch{max-width:420px;margin:0 auto;padding:4.5rem 1.5rem 3.5rem;border:2px solid var(--bordeaux);border-radius:210px 210px 14px 14px;position:relative;background:var(--creme)}
+			.arch::after{content:"";position:absolute;inset:9px;border:1px solid var(--sand);border-radius:200px 200px 8px 8px;pointer-events:none}
+			.kicker{letter-spacing:.3em;text-transform:uppercase;font-size:.8rem;color:var(--sand)}
+			.hero h1{font-size:clamp(3rem,10vw,4.6rem);line-height:1.05;margin:.8rem 0}
+			.hero h1 em{font-size:.6em;color:var(--sand)}
+			.date{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--bordeaux)}
+			#count{margin-top:2.2rem;font-size:.95rem;letter-spacing:.08em;color:var(--bordeaux)}
+			section{max-width:760px;margin:0 auto;padding:3.5rem 1.4rem;text-align:center}
+			section h2{font-size:2.4rem;margin-bottom:1rem}
+			.leaf{display:block;margin:0 auto 1rem}
+			.alt{background:var(--creme-d);max-width:none}
+			.alt>div{max-width:760px;margin:0 auto}
+			footer{text-align:center;padding:2.5rem 1rem;background:var(--bordeaux);color:var(--creme);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem}
+			
+			#rsvp .form-all{background:var(--creme-d);border-radius:18px;max-width:752px;margin:0 auto;text-align:left;font-family:'Jost','Helvetica Neue',Arial,sans-serif;color:var(--text);border:1px solid var(--sand)}
+			#rsvp .form-label{font-weight:400;color:var(--bordeaux)}
+			#rsvp .form-textbox,#rsvp .form-textarea,#rsvp .form-dropdown{background:#fff;border:1px solid var(--sand);border-radius:10px;color:var(--text)}
+			#rsvp .form-textarea{padding:10px}
+			#rsvp .form-dropdown{height:42px}
+			#rsvp .form-radio-item label{font-weight:300}
+			#rsvp .form-submit-button{background:var(--bordeaux);color:var(--creme);border:none;border-radius:24px;height:44px;min-width:200px;font-family:inherit;font-size:1rem;cursor:pointer}
+			#rsvp .form-submit-button:hover{background:var(--bordeaux-d)}
+			#rsvp .form-buttons-wrapper{justify-content:center}
+			#rsvp ul.form-section{padding:1rem 1.2rem}
+			#rsvp .form-line.form-line-error{background:#F6E0E0}
+			#rsvp ul,#rsvp li{list-style:none;list-style-type:none}
+			#rsvp li::marker{content:none}
+			#rsvp ul.form-section{margin:0}
+			#rsvp .form-line{margin:0;padding:.7rem 0}
+			#rsvp .form-all{width:100%}
+			#rsvp .form-textbox,#rsvp .form-textarea,#rsvp .form-dropdown{width:100%!important;max-width:100%;font-size:16px;padding:10px 12px;min-height:44px}
+			#rsvp .form-dropdown{max-width:320px}
+			#rsvp [data-wrapper-react]{display:flex;flex-wrap:wrap;gap:.8rem}
+			#rsvp .form-sub-label-container{display:flex!important;flex-direction:column-reverse;flex:1 1 200px;min-width:0;margin:0!important;width:auto!important}
+			#rsvp .form-sub-label{font-size:.8rem;color:var(--text);opacity:.7;margin-top:.25rem}
+			#rsvp #cid_18 > :not(.guest-picker){position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;opacity:0!important;pointer-events:none!important}
+			#rsvp .guest-picker{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.3rem}
+			#rsvp .guest-picker button{flex:1 1 0;min-width:64px;min-height:48px;padding:.5rem 1rem;background:#fff;border:1px solid var(--sand);border-radius:12px;font-family:inherit;font-size:1.05rem;color:var(--text);cursor:pointer;transition:border-color .15s,background .15s}
+			#rsvp .guest-picker button:hover{border-color:var(--bordeaux)}
+			#rsvp .guest-picker button[aria-checked="true"]{border-color:var(--bordeaux);background:#F6E8E4;box-shadow:0 0 0 1px var(--bordeaux) inset;color:var(--bordeaux);font-weight:400}
+			#rsvp .guest-picker button:focus-visible{outline:2px solid var(--bordeaux);outline-offset:2px}
+			#rsvp .form-single-column{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem;margin-top:.3rem}
+			#rsvp .form-radio-item{position:relative;display:flex!important;align-items:center;gap:.7rem;min-height:48px;margin:0!important;padding:.65rem 1rem;background:#fff;border:1px solid var(--sand);border-radius:12px;cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s;float:none!important;width:auto!important}
+			#rsvp .form-radio-item:hover{border-color:var(--bordeaux)}
+			#rsvp .form-radio-item .dragger-item{display:none}
+			#rsvp .form-radio-item input{appearance:none;-webkit-appearance:none;width:20px;height:20px;margin:0;flex:none;border:1.5px solid var(--sand);border-radius:50%;background:#fff;display:grid;place-content:center;cursor:pointer}
+			#rsvp .form-radio-item input::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--bordeaux);transform:scale(0);transition:transform .15s}
+			#rsvp .form-radio-item input:checked{border-color:var(--bordeaux)}
+			#rsvp .form-radio-item input:checked::before{transform:scale(1)}
+			#rsvp .form-radio-item input:focus-visible{outline:2px solid var(--bordeaux);outline-offset:2px}
+			#rsvp .form-radio-item label{cursor:pointer;margin:0;flex:1;line-height:1.35}
+			#rsvp .form-radio-item label::after{content:"";position:absolute;inset:0;border-radius:inherit}
+			#rsvp .form-radio-item:has(input:checked){border-color:var(--bordeaux);background:#F6E8E4;box-shadow:0 0 0 1px var(--bordeaux) inset}
+			#rsvp .form-radio-item:has(input:checked) label{color:var(--bordeaux);font-weight:400}
+			#rsvp .form-submit-button{max-width:100%}
+			img,svg{max-width:100%;height:auto}
+
+			@media (max-width:820px){
+				section{padding:3rem 1.2rem}
+				section h2{font-size:2.1rem}
+			}
+			@media (max-width:560px){
+				nav{flex-wrap:wrap;gap:.4rem 1rem;padding:.7rem .6rem;font-size:.72rem;letter-spacing:.1em}
+				.hero{padding:2.5rem 1rem 3.5rem}
+				.arch{padding:3.5rem 1.1rem 2.6rem;border-radius:50vw 50vw 14px 14px}
+				.arch::after{border-radius:50vw 50vw 8px 8px}
+				.date{font-size:1.35rem}
+				section{padding:2.5rem 1rem}
+				section h2{font-size:1.9rem}
+				#rsvp .form-all{border-radius:14px}
+				#rsvp ul.form-section{padding:.8rem .9rem}
+				#rsvp .form-dropdown{max-width:100%}
+				#rsvp .form-single-column{grid-template-columns:1fr}
+				#rsvp .form-submit-button{width:100%}
+				footer{font-size:1.2rem}
+			}
+			@media (max-width:360px){
+				.hero h1{font-size:2.6rem}
+			}
+			.menu-card{margin:1.4rem auto 0;max-width:620px;background:#fff8ee;border:1px solid var(--sand);border-radius:14px;padding:1.6rem 1.4rem}
+			.menu-card h3{font-size:1.7rem;margin-bottom:.2rem}
+			.menu-sub{font-size:.85rem;color:var(--text);opacity:.8;margin:0 0 .6rem}
+			.dish{padding:.9rem 0;border-top:1px solid var(--creme-d)}
+			.dish:first-of-type{border-top:0}
+			.dish p{margin:0}
+			.dish .tag{display:block;margin-top:.25rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bordeaux)}
+			.menu-note{max-width:620px;margin:1.6rem auto 0;font-size:.95rem}
+			#rsvp-thanks{max-width:752px;margin:0 auto;padding:2.6rem 1.5rem;background:var(--creme-d);border:1px solid var(--sand);border-radius:120px 120px 18px 18px;text-align:center;outline:none}
+			#rsvp-thanks h3{font-size:2rem;margin-bottom:.6rem}
+			#rsvp-thanks a{color:var(--bordeaux)}
+		</style>
+	</head>
+	<body>
+
+		<nav>
+		  <a href="#start">Start</a><a href="#menue">Menü</a><a href="#rsvp">Rückmeldung</a>
+		</nav>
+
+		<header class="hero" id="start">
+		  <div class="arch">
+			<svg class="leaf" width="64" height="40" viewBox="0 0 64 40" fill="none" stroke="#6B1E2E" stroke-width="1.2"><path d="M32 38V6M32 30C22 30 14 24 12 14c10 0 18 6 20 16zM32 22c10 0 18-6 20-16-10 0-18 6-20 16z"/></svg>
+			<div class="kicker">Wir heiraten</div>
+			<h1>Lisa <em>&amp;</em> Alex</h1>
+			<div class="date">29. Mai 2027</div>
+		  </div>
+		  <div id="count"></div>
+		</header>
+
+		<section class="alt" id="menue"><div>
+		  <h2>Unser Menü</h2>
+		  <p class="menu-note">Vorspeise und Hauptgericht wählt ihr in der Rückmeldung weiter unten aus. Unverträglichkeiten könnt ihr dort ebenfalls eintragen.</p>
+
+		  <div class="menu-card">
+			<h3>Vorspeise</h3>
+			<div class="dish"><p>Tomatensalat mit Burrata, Pesto, Pinienkernen, Rucola und Avocado-Creme</p><span class="tag">Veggie</span></div>
+			<div class="dish"><p>Rinder-Carpaccio vom Filet mit Rucola, Schnittlauch-Creme, eingelegtem Gemüse und Pinienkernen</p><span class="tag">Rind</span></div>
+			<div class="dish"><p>Dritte Vorspeise folgt</p><span class="tag">Hähnchen</span></div>
+		  </div>
+
+		  <div class="menu-card">
+			<h3>Hauptgericht</h3>
+			<div class="dish"><p>Gebratene Gnocchi mit eingelegtem Gemüse, karamellisiertem Ziegenkäse, Spinat und Honig-Senf-Beurre-blanc</p><span class="tag">Veggie</span></div>
+			<div class="dish"><p>Rinderfiletsteak mit Kartoffelgratin, grünem Spargel und Sauce Béarnaise</p><span class="tag">Rind</span></div>
+			<div class="dish"><p>Maishähnchen Coq au Vin mit cremiger Pilz-Polenta, Bouillongemüse und Rotweinsauce</p><span class="tag">Hähnchen</span></div>
+		  </div>
+
+		  <div class="menu-card">
+			<h3>Nachtisch</h3>
+			<p class="menu-sub">in kleinen Gläsern</p>
+			<div class="dish"><p>Tiramisu</p></div>
+			<div class="dish"><p>Mousse au Chocolat</p></div>
+			<div class="dish"><p>Panna Cotta</p></div>
+			<div class="dish"><p>Cheesecake</p></div>
+		  </div>
+
+		  <div class="menu-card">
+			<h3>Mitternachtssnack</h3>
+			<div class="dish"><p>Käseplatte und Brezeln</p></div>
+		  </div>
+		</div></section>
+
+		<section id="rsvp"><div>
+		  <h2>Rückmeldung</h2>
+		  <p>Bitte gebt uns bis zum 22. April 2027 Bescheid.</p>
+
+		<!-- ===== JOTFORM START ===== -->
+		<script>window.enableEventObserver=true</script>
+		<script>window.enableDateFieldSelectInputs=false</script>
+		<script>window.CDN="https://cdn.jotfor.ms/"</script>
+		<script>window.umdRootPath="https://cdn.jotfor.ms/s/umd/4260a2e0bd3/"</script>
+		<script>window.staticRootPath="https://cdn.jotfor.ms/s/static/4260a2e0bd3/"</script>
+		<script>window['__jfrouter'] = [{"ACTIVE_APP":"for-form-render","REVISION_HASH":"4260a2e0bd3"}];</script>
+		<script src="https://cdn.jotfor.ms/s/static/4260a2e0bd3/secure-message-bus.js"></script>
+		<script src="https://cdn.jotfor.ms/s/static/4260a2e0bd3/static/prototype.forms.js"></script>
+		<script src="https://cdn.jotfor.ms/s/static/4260a2e0bd3/static/jotform.forms.js"></script>
+		<script src="https://cdn.jotfor.ms/s/static/4260a2e0bd3/js/dropdownV2.js" defer></script>
+		<script src="https://cdn.jotfor.ms/s/umd/4260a2e0bd3/for-aria-notify-polyfill.js"></script>
+		<script src="https://cdn.jotfor.ms/s/static/4260a2e0bd3/js/vendor/smoothscroll.min.js"></script>
+		<script src="https://cdn.jotfor.ms/s/static/4260a2e0bd3/js/errorNavigation.js"></script>
+		<link rel="stylesheet" href="https://cdn.jotfor.ms/stylebuilder/static/form-common.css?v=68ec71d">
+		<p id="jf-fallback" style="display:none">Das Formular konnte nicht geladen werden. Bitte <a href="https://form.jotform.com/262164056552051" target="_blank" rel="noopener">hier klicken</a>, um direkt zu antworten.</p>
+		<script>
+		if (window.JotForm) {
+			JotForm.newDefaultTheme = true;
+			JotForm.extendsNewTheme = false;
+			JotForm.singleProduct = false;
+			JotForm.newPaymentUI = true;
+			JotForm.originalLanguage = "de";
+			JotForm.isFormViewTrackingAllowed = true;
+			JotForm.replaceTagTest = true;
+			JotForm.activeRedirect = "thanktext";
+			JotForm.uploadServerURL = "https://upload.jotform.com/upload";
+			JotForm.setConditions([{"action":[{"id":"action_0_1786087140812","isError":false,"visibility":"ShowMultiple","fields":["18","8","9","5"]}],"id":"262163491257055","index":"0","isError":"1","link":"All","priority":"0","terms":[{"id":"term_0_1786087140812","field":"3","operator":"equals","value":"Ja, ich komme gerne!","isError":false}],"type":"field"},{"action":[{"id":"action_0_1786086538375","visibility":"ShowMultiple","isError":false,"fields":["10","15","11"]}],"id":"262163969087066","index":"1","link":"All","priority":"1","terms":[{"id":"term_0_1786086538375","field":"18","operator":"equals","value":"1","isError":false},{"id":"term_1_1786086538375","field":"3","operator":"equals","value":"Ja, ich komme gerne!","isError":false}],"type":"field"},{"action":[{"id":"action_0_1786086557829","visibility":"ShowMultiple","isError":false,"fields":["15","10","11","16","12","13"]}],"id":"262163361703047","index":"2","link":"All","priority":"2","terms":[{"id":"term_0_1786086557829","field":"18","operator":"equals","value":"2","isError":false},{"id":"term_1_1786086557829","field":"3","operator":"equals","value":"Ja, ich komme gerne!","isError":false}],"type":"field"}]);
+			JotForm.clearFieldOnHide="disable";
+			JotForm.submitError="jumpToFirstError";
+			JotForm.isFullSource = true;
+			JotForm.init(function(){
+				if (window.JotForm && JotForm.accessible) $('input_5').setAttribute('tabindex',0);
+				if (window.JotForm && JotForm.accessible) $('input_6').setAttribute('tabindex',0);
+				JotForm.alterTexts({"alphabetic":"Dieses Feld darf nur Buchstaben enthalten","email":"Geben Sie eine gültige E-Mail-Adresse ein","error":"Fehler","fieldError":"Feld hat einen Fehler.","generalError":"Ihr Formular enthält Fehler. Bitte korrigieren Sie diese, bevor Sie fortfahren.","generalPageError":"Diese Seite enthält Fehler. Bitte korrigieren Sie diese, bevor Sie fortfahren.","incompleteFields":"Es gibt unvollständige Pflichtfelder. Bitte füllen Sie diese aus.","multipleError":"Es gibt {count} Fehler auf dieser Seite. Bitte prüfen Sie diese, bevor Sie fortfahren.","oneError":"Es gibt {count} Fehler auf dieser Seite. Bitte prüfen Sie diesen, bevor Sie fortfahren.","pleaseWait":"Bitte warten...","required":"Dies ist ein Pflichtfeld.","requiredLegend":"Alle mit * gekennzeichneten Felder sind Pflichtfelder und müssen ausgefüllt werden.","submitButtonText":"Absenden","submissionLimit":"Leider ist nur ein Eintrag möglich. <br> Mehrmalige Antworten sind für dieses Formular deaktiviert.","doneButton":"Erledigt","doneMessage":"Sehr gut! Alle Fehler sind behoben.","seeErrorsButton":"Fehler anzeigen"});
+			});
+		} else {
+			document.getElementById('jf-fallback').style.display = 'block';
+		}
+		</script>
+
+		<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/262164056552051" method="post" target="jf_target" name="form_262164056552051" id="262164056552051" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="262164056552051" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1794381054710" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="submitDate" name="submitDate" value="undefined" /><input type="hidden" id="buildDate" name="buildDate" value="1794381054710" /><input type="hidden" name="uploadServerUrl" value="https://upload.jotform.com/upload" /><input type="hidden" name="eventObserver" value="1" />
+		  <div role="main" class="form-all">
+			<ul class="form-section page-section" role="presentation">
+			  <li class="form-line jf-required" data-type="control_fullname" id="id_2"><label class="form-label form-label-top form-label-auto" id="label_2" for="first_2"> Dein Name<span class="form-required" aria-hidden="true">*</span> </label>
+				<div id="cid_2" class="form-input-wide jf-required" data-layout="full"><div aria-labelledby="label_2" role="group" data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_2" name="q2_q2_fullname0[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_2 given-name" size="10" data-component="first" aria-labelledby="sublabel_2_first" required="" value="" /><label class="form-sub-label" for="first_2" id="sublabel_2_first" style="min-height:13px">Vorname</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_2" name="q2_q2_fullname0[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_2 family-name" size="15" data-component="last" aria-labelledby="sublabel_2_last" required="" value="" /><label class="form-sub-label" for="last_2" id="sublabel_2_last" style="min-height:13px">Nachname</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required" data-type="control_radio" id="id_3"><span class="form-label form-label-top form-label-auto" id="label_3"> Wirst du an unserer Hochzeit teilnehmen?<span class="form-required" aria-hidden="true">*</span> </span>
+				<div id="cid_3" class="form-input-wide jf-required" data-layout="full"><div class="form-single-column" role="radiogroup" aria-required="true" aria-labelledby="label_3" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_3_0" name="q3_q3_radio1" aria-labelledby="label_input_3_0" value="Ja, ich komme gerne!" /><label aria-hidden="true" id="label_input_3_0" for="input_3_0">Ja, ich komme gerne!</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_3_1" name="q3_q3_radio1" aria-labelledby="label_input_3_1" value="Nein, leider kann ich nicht kommen." /><label aria-hidden="true" id="label_input_3_1" for="input_3_1">Nein, leider kann ich nicht kommen.</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_dropdown" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="input_18"> Mit wie vielen Begleitpersonen wirst du kommen?<span class="form-required" aria-hidden="true">*</span> </label>
+				<div id="cid_18" class="form-input-wide jf-required" data-layout="half"> <select class="form-dropdown validate[required]" id="input_18" name="q18_mitWie" data-ui-version="v2" data-visible-options="10" data-search-visibility="Auto" data-component="dropdown" required="" aria-label="Mit wie vielen Begleitpersonen wirst du kommen?"><option value="">Bitte auswählen</option><option value="0" selected="">0</option><option value="1">1</option><option value="2">2</option></select> </div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_8"><span class="form-label form-label-top form-label-auto" id="label_8"> Deine Vorspeise<span class="form-required" aria-hidden="true">*</span> </span>
+				<div id="cid_8" class="form-input-wide jf-required" data-layout="full"><div class="form-single-column" role="radiogroup" aria-required="true" aria-labelledby="label_8" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_8_0" name="q8_deineVorspeise" aria-labelledby="label_input_8_0" value="Veggie" /><label aria-hidden="true" id="label_input_8_0" for="input_8_0">Veggie</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_8_1" name="q8_deineVorspeise" aria-labelledby="label_input_8_1" value="Rind" /><label aria-hidden="true" id="label_input_8_1" for="input_8_1">Rind</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_8_2" name="q8_deineVorspeise" aria-labelledby="label_input_8_2" value="Hähnchen" /><label aria-hidden="true" id="label_input_8_2" for="input_8_2">Hähnchen</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_8_3" name="q8_deineVorspeise" aria-labelledby="label_input_8_3" value="Keine Vorspeise" /><label aria-hidden="true" id="label_input_8_3" for="input_8_3">Keine Vorspeise</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_9"><span class="form-label form-label-top form-label-auto" id="label_9"> Dein Hauptgericht<span class="form-required" aria-hidden="true">*</span> </span>
+				<div id="cid_9" class="form-input-wide jf-required" data-layout="full"><div class="form-single-column" role="radiogroup" aria-required="true" aria-labelledby="label_9" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_9_0" name="q9_deinHauptgericht" aria-labelledby="label_input_9_0" value="Veggie" /><label aria-hidden="true" id="label_input_9_0" for="input_9_0">Veggie</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_9_1" name="q9_deinHauptgericht" aria-labelledby="label_input_9_1" value="Rind" /><label aria-hidden="true" id="label_input_9_1" for="input_9_1">Rind</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_9_2" name="q9_deinHauptgericht" aria-labelledby="label_input_9_2" value="Hähnchen" /><label aria-hidden="true" id="label_input_9_2" for="input_9_2">Hähnchen</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_9_3" name="q9_deinHauptgericht" aria-labelledby="label_input_9_3" value="Kein Hauptgericht" /><label aria-hidden="true" id="label_input_9_3" for="input_9_3">Kein Hauptgericht</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_fullname" id="id_15"><label class="form-label form-label-top form-label-auto" id="label_15" for="first_15"> Name Begleitung<span class="form-required" aria-hidden="true">*</span> </label>
+				<div id="cid_15" class="form-input-wide jf-required" data-layout="full"><div aria-labelledby="label_15" role="group" data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_15" name="q15_nameBegleitung[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_15 given-name" size="10" data-component="first" aria-labelledby="sublabel_15_first" required="" value="" /><label class="form-sub-label" for="first_15" id="sublabel_15_first" style="min-height:13px">Vorname</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_15" name="q15_nameBegleitung[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_15 family-name" size="15" data-component="last" aria-labelledby="sublabel_15_last" required="" value="" /><label class="form-sub-label" for="last_15" id="sublabel_15_last" style="min-height:13px">Nachname</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_10"><span class="form-label form-label-top form-label-auto" id="label_10"> Vorspeise Begleitung<span class="form-required" aria-hidden="true">*</span> </span>
+				<div id="cid_10" class="form-input-wide jf-required" data-layout="full"><div class="form-single-column" role="radiogroup" aria-required="true" aria-labelledby="label_10" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_10_0" name="q10_voorgerechtVoor10" aria-labelledby="label_input_10_0" value="Veggie" /><label aria-hidden="true" id="label_input_10_0" for="input_10_0">Veggie</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_10_1" name="q10_voorgerechtVoor10" aria-labelledby="label_input_10_1" value="Rind" /><label aria-hidden="true" id="label_input_10_1" for="input_10_1">Rind</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_10_2" name="q10_voorgerechtVoor10" aria-labelledby="label_input_10_2" value="Hähnchen" /><label aria-hidden="true" id="label_input_10_2" for="input_10_2">Hähnchen</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_10_3" name="q10_voorgerechtVoor10" aria-labelledby="label_input_10_3" value="Keine Vorspeise" /><label aria-hidden="true" id="label_input_10_3" for="input_10_3">Keine Vorspeise</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_11"><span class="form-label form-label-top form-label-auto" id="label_11"> Hauptgericht Begleitung<span class="form-required" aria-hidden="true">*</span> </span>
+				<div id="cid_11" class="form-input-wide jf-required" data-layout="full"><div class="form-single-column" role="radiogroup" aria-required="true" aria-labelledby="label_11" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_11_0" name="q11_hoofdgerechtVoor11" aria-labelledby="label_input_11_0" value="Veggie" /><label aria-hidden="true" id="label_input_11_0" for="input_11_0">Veggie</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_11_1" name="q11_hoofdgerechtVoor11" aria-labelledby="label_input_11_1" value="Rind" /><label aria-hidden="true" id="label_input_11_1" for="input_11_1">Rind</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_11_2" name="q11_hoofdgerechtVoor11" aria-labelledby="label_input_11_2" value="Hähnchen" /><label aria-hidden="true" id="label_input_11_2" for="input_11_2">Hähnchen</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_11_3" name="q11_hoofdgerechtVoor11" aria-labelledby="label_input_11_3" value="Kein Hauptgericht" /><label aria-hidden="true" id="label_input_11_3" for="input_11_3">Kein Hauptgericht</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_fullname" id="id_16"><label class="form-label form-label-top form-label-auto" id="label_16" for="first_16"> Weitere Person<span class="form-required" aria-hidden="true">*</span> </label>
+				<div id="cid_16" class="form-input-wide jf-required" data-layout="full"><div aria-labelledby="label_16" role="group" data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_16" name="q16_weiterePerson[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_16 given-name" size="10" data-component="first" aria-labelledby="sublabel_16_first" required="" value="" /><label class="form-sub-label" for="first_16" id="sublabel_16_first" style="min-height:13px">Vorname</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_16" name="q16_weiterePerson[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_16 family-name" size="15" data-component="last" aria-labelledby="sublabel_16_last" required="" value="" /><label class="form-sub-label" for="last_16" id="sublabel_16_last" style="min-height:13px">Nachname</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_12"><span class="form-label form-label-top form-label-auto" id="label_12"> Vorspeise weitere Person<span class="form-required" aria-hidden="true">*</span> </span>
+				<div id="cid_12" class="form-input-wide jf-required" data-layout="full"><div class="form-single-column" role="radiogroup" aria-required="true" aria-labelledby="label_12" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_voorgerechtVoor12" aria-labelledby="label_input_12_0" value="Veggie" /><label aria-hidden="true" id="label_input_12_0" for="input_12_0">Veggie</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_voorgerechtVoor12" aria-labelledby="label_input_12_1" value="Rind" /><label aria-hidden="true" id="label_input_12_1" for="input_12_1">Rind</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_voorgerechtVoor12" aria-labelledby="label_input_12_2" value="Hähnchen" /><label aria-hidden="true" id="label_input_12_2" for="input_12_2">Hähnchen</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_voorgerechtVoor12" aria-labelledby="label_input_12_3" value="Keine Vorspeise" /><label aria-hidden="true" id="label_input_12_3" for="input_12_3">Keine Vorspeise</label></span></div></div>
+			  </li>
+			  <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_13"><span class="form-label form-label-top form-label-auto" id="label_13"> Hauptgericht weitere Person<span class="form-required" aria-hidden="true">*</span> </span>
+				<div id="cid_13" class="form-input-wide jf-required" data-layout="full"><div class="form-single-column" role="radiogroup" aria-required="true" aria-labelledby="label_13" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_13_0" name="q13_hoofdgerechtVoor13" aria-labelledby="label_input_13_0" value="Veggie" /><label aria-hidden="true" id="label_input_13_0" for="input_13_0">Veggie</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_13_1" name="q13_hoofdgerechtVoor13" aria-labelledby="label_input_13_1" value="Rind" /><label aria-hidden="true" id="label_input_13_1" for="input_13_1">Rind</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_13_2" name="q13_hoofdgerechtVoor13" aria-labelledby="label_input_13_2" value="Hähnchen" /><label aria-hidden="true" id="label_input_13_2" for="input_13_2">Hähnchen</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" class="form-radio validate[required]" id="input_13_3" name="q13_hoofdgerechtVoor13" aria-labelledby="label_input_13_3" value="Kein Hauptgericht" /><label aria-hidden="true" id="label_input_13_3" for="input_13_3">Kein Hauptgericht</label></span></div></div>
+			  </li>
+			  <li class="form-line form-field-hidden" style="display:none;" data-type="control_textarea" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Gibt es besondere Essenswünsche oder Unverträglichkeiten? </label>
+				<div id="cid_5" class="form-input-wide" data-layout="full"> <textarea id="input_5" class="form-textarea" name="q5_q5_textarea3" style="width:100%;height:120px" data-component="textarea" aria-labelledby="label_5"></textarea> </div>
+			  </li>
+			  <li class="form-line" data-type="control_textarea" id="id_6"><label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> Weitere Anmerkungen oder Wünsche </label>
+				<div id="cid_6" class="form-input-wide" data-layout="full"> <textarea id="input_6" class="form-textarea" name="q6_q6_textarea4" style="width:100%;height:120px" data-component="textarea" aria-labelledby="label_6"></textarea> </div>
+			  </li>
+			  <li class="form-line" data-type="control_button" id="id_7">
+				<div id="cid_7" class="form-input-wide" data-layout="full"><div data-align="auto" class="form-buttons-wrapper form-buttons-auto jsTest-button-wrapperField"><button id="input_7" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField legacy-submit" data-component="button" data-content="">Rückmeldung absenden</button></div></div>
+			  </li>
+			  <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+			</ul>
+		  </div>
+		  <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="262164056552051" />
+		  <script>
+			var all_spc = document.querySelectorAll("form[id='262164056552051'] .si" + "mple" + "_spc");
+			for (var i = 0; i < all_spc.length; i++) { all_spc[i].value = "262164056552051-262164056552051"; }
+		  </script>
+		</form>
+		<iframe name="jf_target" id="jf_target" title="Formularübermittlung" style="display:none" tabindex="-1" aria-hidden="true"></iframe>
+		<div id="rsvp-thanks" role="status" tabindex="-1" style="display:none">
+		  <h3>Vielen Dank!</h3>
+		  <p id="rsvp-thanks-text">Eure Rückmeldung ist bei uns angekommen. Wir freuen uns auf euch.</p>
+		</div>
+		<script>
+		(function(){
+		  var form=document.getElementById('262164056552051');
+		  var frame=document.getElementById('jf_target');
+		  var thanks=document.getElementById('rsvp-thanks');
+		  if(!form||!frame||!thanks) return;
+		  var sent=false;
+		  var declined=false;
+		  form.addEventListener('submit',function(){
+		    sent=true;
+		    var a=form.querySelector('input[name="q3_q3_radio1"]:checked');
+		    declined=!!(a&&a.value.indexOf('Nein')===0);
+		  });
+		  frame.addEventListener('load',function(){
+		    if(!sent) return;
+		    sent=false;
+		    form.style.display='none';
+		    var txt=document.getElementById('rsvp-thanks-text');
+		    if(txt) txt.textContent=declined
+		      ? 'Schade, dass ihr nicht dabei sein könnt. Danke, dass ihr uns Bescheid gegeben habt.'
+		      : 'Eure Rückmeldung ist bei uns angekommen. Wir freuen uns auf euch.';
+		    thanks.style.display='block';
+		    thanks.focus();
+		    thanks.scrollIntoView({behavior:'smooth',block:'center'});
+		  });
+		})();
+		</script>
+		<!-- ===== JOTFORM ENDE ===== -->
+
+		<script>
+		(function(){
+		  var sel=document.getElementById('input_18'), box=document.getElementById('cid_18');
+		  if(!sel||!box) return;
+		  var wrap=document.createElement('div');
+		  wrap.className='guest-picker'; wrap.setAttribute('role','radiogroup'); wrap.setAttribute('aria-labelledby','label_18');
+		  var btns=[];
+		  function sync(){ btns.forEach(function(b){ b.setAttribute('aria-checked', b.dataset.value===sel.value?'true':'false'); }); }
+		  Array.prototype.forEach.call(sel.options,function(o){
+		    if(!o.value) return;
+		    var b=document.createElement('button');
+		    b.type='button'; b.textContent=o.value==='0'?'Keine':o.textContent; b.dataset.value=o.value; b.setAttribute('role','radio');
+		    b.addEventListener('click',function(){
+		      sel.value=o.value;
+		      sel.dispatchEvent(new Event('change',{bubbles:true}));
+		      if(window.JotForm&&JotForm.runConditionForId) JotForm.runConditionForId('18');
+		      sync();
+		    });
+		    btns.push(b); wrap.appendChild(b);
+		  });
+		  sel.addEventListener('change',sync);
+		  box.appendChild(wrap); sync();
+		})();
+		</script>
+
+		</div></section>
+
+		<footer>Lisa &amp; Alex · 29.05.2027</footer>
+
+		<script>
+		(function(){
+		  var el=document.getElementById('count');
+		  if(!el) return;
+		  function tick(){
+		    // Es zählen ganze Kalendertage (Mitternacht zu Mitternacht), die Zahl ändert sich also nur einmal pro Tag
+		    var now=new Date();
+		    var today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+		    var wedding=new Date(2027,4,29);
+		    var days=Math.round((wedding-today)/864e5);
+		    if(days>1)      el.textContent='Noch '+days+' Tage bis zu unserer Hochzeit';
+		    else if(days===1) el.textContent='Morgen ist es soweit!';
+		    else if(days===0) el.textContent='Heute ist der große Tag!';
+		    else            el.textContent='Danke, dass ihr diesen Tag mit uns gefeiert habt!';
+		  }
+		  tick();setInterval(tick,6e4);
+		})();
+		</script>
+	</body>
+</html>
